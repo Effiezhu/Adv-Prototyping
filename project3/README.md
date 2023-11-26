@@ -8,4 +8,6 @@ the servo of the rotating door will start rotate and hit the ball to roll throug
 Original Sketches: 
 
 ![Sketch](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/f56d3c71-5519-4373-aef5-57f88e4dce3f)
+
+Flow Chart:
 ![Flow chart](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/e956589c-252c-48e7-8160-03bc41a052f2)
