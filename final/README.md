@@ -6,22 +6,6 @@ Couplink is a pair of smart bracelets designed for couples in long-distance rela
 
 ![IMG_1331](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/d73d632d-986d-4c10-ad10-7d66e63013ef)
 
-
-  
-### Formatting Tips  
-   
-To format text into separate lines or paragraphs with [markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), include at least 2 spaces at the end.  The extra spaces act as line breaks.  
-
-Links can be inserted with [link text in square brackets] followed by (link URL in parantheses).  For example, the markdown for [link to this page](../assignment04/) on GitHub Pages is: 
-`[link to this page](../assignment04/)`  
-
-Note the use of relative paths in links.  The dot slash `./` in link path means the file is in the current directory, `../` means that it is in parent directory, `../../` is one more directory up and so on.  
-  
-To insert images, the syntax is almost the same with the addition of exclamation point `!` before [image description in square brackets] followed by (image link in parentheses).  The image below is included with:  
-`![led blink circuit](../class02/led_blink_bb.png)` syntax.  
-
-![blink led circuit](../class02/led_blink_bb.png) 
-
 ## Implementation   
 
 Explain your process of prototype development including all applicable aspects such as hardware (electronics), firmware (MicroPython code), software (HTML/CSS/JavaScript or other code), integrations (Adafruit IO, IFTTT, etc.), enclosure and mechanical design.  Use a separate subheader for each part:
@@ -42,6 +26,7 @@ Explain your process of prototype development including all applicable aspects s
 ### Firmware   
 
 [Server code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/server.py)
+
 [Client code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/client.py)
 
 To make the two individual Atoms3 Lite boards communicate with each other, I used one of them as a server and the other board as a client and connected them with bluetooth. I wrote the code in the main.py, so the server board will constantly broadcasting and send the data to the client board. When the client board is connected to the server board, it will constantly looking for data from the server. 
