@@ -33,7 +33,9 @@ Explain your process of prototype development including all applicable aspects s
 * 1 pressure sensor
 * 1 transistor
 * 1 peltier module
+
   
+![Wiring Diagram](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/b5639cc5-2c88-44e4-a13a-16227d5f9f15)
 ![IMG_0159](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/835d2810-65b8-4a67-93dc-7fe93306fa51)
 ![IMG_0158](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/bab497bf-ddb5-4a67-b3f3-fbfc069dc28a)
 
