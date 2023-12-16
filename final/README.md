@@ -25,8 +25,7 @@ Explain your process of prototype development including all applicable aspects s
 
 ### Firmware   
 
-[Server code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/server.py)
-
+[Server code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/server.py)  
 [Client code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/client.py)
 
 To make the two individual Atoms3 Lite boards communicate with each other, I used one of them as a server and the other board as a client and connected them with bluetooth. I wrote the code in the main.py, so the server board will constantly broadcasting and send the data to the client board. When the client board is connected to the server board, it will constantly looking for data from the server. 
@@ -69,11 +68,16 @@ if BtnA.wasPressed():
     mqtt_client.publish('Effieee/feeds/button-feed', 'Love you', qos=0)
 ```
 
-### Software   
-
-If applicable, explain the important software components of your project with relevant code snippets and links.  
 
 ### Integrations   
+[Adafruit](https://io.adafruit.com/Effieee/feeds/button-feed)  
+<img width="1117" alt="feed" src="https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/1929cd3f-4f17-4f85-9736-d993131d6849">
+[IFTTT Telegram Integration](https://ifttt.com/applets/rrFpRwTj-press-button-to-send-a-message-to-telegram)
+<img width="1512" alt="applet" src="https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/de763ebc-5a6b-4d0b-831a-829d366c4c8f">
+<img width="911" alt="applet activity" src="https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/d4cab135-11a6-47b1-b088-54dab087b70a">
+
+
+
 
 Include a link to and/or screenshots of other functional components of your project, like Adafruit IO feeds, dashboards, IFTTT applets, etc.  In general, think of your audience as someone new trying to learn how to make your project and make sure to cover anything helpful to explain the functional parts of it.
 
