@@ -41,13 +41,47 @@ Explain your process of prototype development including all applicable aspects s
 
 ### Firmware   
 
-Provide a link to your MicroPython code and explain a few important parts that make your prototype work.  Most likely you should explain the inputs/outputs used in your code and how they affect the behavior of the prototype.
+[Server code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/server.py)
+[Client code](https://github.com/Effiezhu/Adv-Prototyping/blob/main/final/client.py)
 
-To include code snippets, you can use the code block markdown, like this:
+To make the two individual Atoms3 Lite boards communicate with each other, I used one of them as a server and the other board as a client and connected them with bluetooth. I wrote the code in the main.py, so the server board will constantly broadcasting and send the data to the client board. When the client board is connected to the server board, it will constantly looking for data from the server. 
 
-``` Python  
-if(input_val > 1000):  # sensor value higher than threshold
-   led_pin.on()  # turn on LED
+For the server script, it had two input: one is ADC and one is button. Whenever the pressure sensor value is pressed, the server will write a message to the client.  
+``` 
+  adc_val = adc.read()
+  adc_val_8bit = map_value(adc_val, in_min = 0, in_max = 4095,
+                           out_min = 0, out_max = 255)
+  print('adc value', adc_val_8bit)
+  
+  # When pressure sensor is pressed, write a message to client
+  if adc_val_8bit < 130:
+    print('adc value low')
+    ble_server.write('low')
+    print('write to bleuart..', message)
+    time.sleep_ms(2000)
+```
+
+When the client receive the message, it will turns on the peltier module for 15 seconds before turning it off.  
+``` 
+  if(data != ''):
+    print('data =', data)
+    peltier_timer = time.ticks_ms()
+    print('peltier timer', peltier_timer)
+    
+    control_peltier(True)  # Turn on the Peltier module
+  if peltier_timer and time.ticks_ms() >= peltier_timer + 15000:
+    print('turn off time is:', time.ticks_ms())
+    control_peltier(False)  # Turn off the Peltier module
+    peltier_timer = None  # Reset the timer
+    
+  time.sleep_ms(100)
+```
+
+And when the button was pressed, the board will send the data to Adafruit, and IFTTT will send the message to Telegram through Wifi.  
+``` 
+if BtnA.wasPressed():
+    print('button pressed...')
+    mqtt_client.publish('Effieee/feeds/button-feed', 'Love you', qos=0)
 ```
 
 ### Software   
