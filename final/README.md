@@ -1,8 +1,12 @@
-# Long Distance Couple Bracelets
+# COUPLINK
 
-## Introduction   
+## Introduction 
 
-Provide a description of your initial project idea and include images of the concept sketches that you created in Part 1 of this assignment.  Explain the reasoning behind your final choice of the project concept, whether it’s based on one of the initial sketches, a combination of or a departure from the original concepts.  
+Couplink is a pair of smart bracelets designed for couples in long-distance relationships. With simple interactions, such as pressing pressure sensor to send thermal feedback and pressing button to send text message and vibration signal, the bracelets aim to bridge the physical gap by facilitating a more intimate and immediate connection between partners, regardless of the distance. For the final design, I removed the vibration motor because it works similarly as the peltier module and will be redundant if I used both. Aside from that, I also designed a more handcraft style fabric bracelet instead of a traditional smartwatch look, so it feels more intimate and warm.
+
+![IMG_1331](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/d73d632d-986d-4c10-ad10-7d66e63013ef)
+
+
   
 ### Formatting Tips  
    
@@ -24,14 +28,14 @@ Explain your process of prototype development including all applicable aspects s
 
 ### Hardware
 
-List all the separate hardware components used in your project and briefly explain what they do.  To create a list with markdown syntax, use `-`, `*`, or `+` characters with each line of text:  
-* item 1  
-* item 2   
-* etc.  
-
-Include a schematic diagram image (hand-drawn is OK) showing all the wiring connections between the M5Stack AtomS3 board and other components.  
-
-In addition, include at least one photo showing your hardware wiring.  This can be several close-ups with the goal of showing how the wiring connections are made.  
+* 2 of M5Stack ATOMS3 Lite Board
+* 2 of M5Stack ATOM TailBat Battery
+* 1 pressure sensor
+* 1 transistor
+* 1 peltier module
+  
+![IMG_0159](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/835d2810-65b8-4a67-93dc-7fe93306fa51)
+![IMG_0158](https://github.com/Effiezhu/Adv-Prototyping/assets/123921938/bab497bf-ddb5-4a67-b3f3-fbfc069dc28a)
 
 ### Firmware   
 
